@@ -1,4 +1,4 @@
-# sea-war-anders-blom
+# Sea War
 
 ## Object of the game
 
