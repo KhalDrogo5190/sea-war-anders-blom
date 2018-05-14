@@ -2,7 +2,7 @@
 
 ## Object of the game
 
-Sink the pirate ships before they take your booty! Arrrrrr!!
+Sink those stupid police ships before they take your treasure! Arrrrrr!!
 
 ## Controls 
 
