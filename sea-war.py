@@ -45,15 +45,18 @@ yellow_ship1 = pygame.image.load('Assets/Images/Ships/ship5.png')
 yellow_ship2 = pygame.image.load('Assets/Images/Ships/ship10.png')
 yellow_ship3 = pygame.image.load('Assets/Images/Ships/ship15.png')
 
+green_ship1 = pygame.image.load('Assets/Images/Ships/ship3.png')
+
 cannon_img =  pygame.image.load('Assets/Images/Weapons/cannon.png')
 cannonball_img = pygame.image.load('Assets/Images/Weapons/cannonBall.png')
 sea = pygame.image.load("Assets/Images/Effects/sea.png")
 pirate_boat = pygame.image.load("Assets/Images/Effects/pirateboat.png")
 cross_bones = pygame.image.load("Assets/Images/Effects/crossbones.png")
+bandaid_img = pygame.image.load("Assets/Images/Effects/bandaid.png")
 
-player_img1 = black_ship1
+player_img3 = black_ship1
 player_img2 = black_ship2
-player_img3 = black_ship3
+player_img1 = black_ship3
 
 mob_img1 = blue_ship1
 mob_img2 = blue_ship2
@@ -62,6 +65,8 @@ mob_img3 = blue_ship3
 yacht_img1 = yellow_ship1
 yacht_img2 = yellow_ship2
 yacht_img3 = yellow_ship3
+
+medic_img = green_ship1
 
 #Sound
 pygame.mixer.music.load("Assets/Sounds/background_dank_music.ogg")
@@ -124,17 +129,29 @@ class Ship(pygame.sprite.Sprite):
 
         if len(hit_list_1) > 0 or len(hit_list_2) > 0:
             self.shield = 0
-        
 
-        if self.shield == 2:
+
+        heal_list = pygame.sprite.spritecollide(self, firstaids, True, pygame.sprite.collide_mask)
+
+        for heal in heal_list:
+            if self.shield <  3:
+                self.shield += 1
+            else:
+                pass
+        if self.shield == 3:
+            self.image = player_img3
+
+        elif self.shield == 2:
             self.image = player_img2
 
-        if self.shield == 1:
-            self.image = player_img3
+        elif self.shield == 1:
+            self.image = player_img1
             
-        if self.shield == 0:
+        elif self.shield == 0:
             self.kill()
             death.play()
+
+            
 
         if self.rect.right < 0:
             self.rect.left = WIDTH
@@ -363,7 +380,73 @@ class Flock:
             bomber.drop_cannon()
 
     
+class Healer:
 
+    def __init__(self, x, y, image):
+        self.image = image
+        self.mask = pygame.mask.from_surface(self.image)
+        self.rect = self.image.get_rect()
+        self.rect.x = x
+        self.rect.y = y
+        self.heal_rate = 600
+        self.speed = 10
+        self.moving_right = True
+
+    def heal(self):
+        bandaid = Firstaid(bandaid_img)
+        bandaid.rect.centerx = self.rect.centerx
+        bandaid.rect.centery = self.rect.top
+        firstaids.add(bandaid)
+        
+
+    def move(self):
+        reverse = False
+        if self.moving_right:
+            self.rect.x += self.speed
+            if self.rect.right >= WIDTH:
+                reverse = True
+                
+        else:
+            self.rect.x -= self.speed
+            
+            if self.rect.left <=0:
+                reverse = True
+
+        if reverse == True:
+            self.moving_right = not self.moving_right
+
+    def choose_healer(self):
+        rand = random.randrange(0, self.heal_rate)
+        all_mobs = mobs.sprites()
+        
+        if rand == 0:
+            return True
+        else:
+            return None
+        
+    def update(self):
+        self.move()
+
+        healer = self.choose_healer()
+        if healer == True:
+            self.heal()
+            
+class Firstaid(pygame.sprite.Sprite):
+    
+    def __init__(self, image):
+        super().__init__()
+
+        self.image = image
+        self.mask = pygame.mask.from_surface(self.image)
+        self.rect = self.image.get_rect()
+        
+        self.speed = 3
+
+    def update(self):
+        self.rect.y += self.speed
+        if self.rect.top > HEIGHT:
+            self.kill()
+    
 
 # Game helper functions
 def show_title_screen():
@@ -383,31 +466,35 @@ def show_stats(player):
     score_text = FONT_MD.render("score " + str(player.score), 1, WHITE)
     shield_text = FONT_MD.render("shield", 1, WHITE)
     level_text = FONT_MD.render("level " + str(player.level), 1, WHITE)
+    high_score_text = FONT_MD.render("highscore " + str(high_score), 1, WHITE)
     
     if ship.shield == 3:
-        pygame.draw.rect(screen, WHITE, [118, 74, 100, 18])
-        pygame.draw.rect(screen, GREEN, [118, 74, 100, 18])
+        pygame.draw.rect(screen, WHITE, [118, 106, 100, 18])
+        pygame.draw.rect(screen, GREEN, [118, 106, 100, 18])
     elif ship.shield == 2:
-        pygame.draw.rect(screen, WHITE, [118, 74, 100, 18])
-        pygame.draw.rect(screen, GREEN, [118, 74, 67, 18])
+        pygame.draw.rect(screen, WHITE, [118, 106, 100, 18])
+        pygame.draw.rect(screen, GREEN, [118, 106, 67, 18])
     elif ship.shield == 1:
-        pygame.draw.rect(screen, WHITE, [118, 74, 100, 18])
-        pygame.draw.rect(screen, GREEN, [118, 74, 33, 18])
+        pygame.draw.rect(screen, WHITE, [118, 106, 100, 18])
+        pygame.draw.rect(screen, GREEN, [118, 106, 33, 18])
     else:
-        pygame.draw.rect(screen, RED, [118, 74, 100, 18])
+        pygame.draw.rect(screen, RED, [118, 106, 100, 18])
 
 
-    screen.blit(score_text, [32, 32])
-    screen.blit(shield_text, [32, 64])
+    screen.blit(score_text, [32, 64])
+    screen.blit(shield_text, [32, 96])
     screen.blit(level_text, [700, 32])
+    screen.blit(high_score_text, [32, 32])
    
 def setup():
-    global ship, mobs, stage, player, bombs, lasers, fleet, flock, yachts, cannons
+    global ship, mobs, stage, player, bombs, lasers, fleet, flock, yachts, cannons, medic, firstaids, high_score
     
     # sprite groups
     mobs = pygame.sprite.Group()
     
     yachts = pygame.sprite.Group()
+
+    healers = pygame.sprite.Group()
 
     
     # Make game objects
@@ -418,7 +505,12 @@ def setup():
     mobs.add(mob1, mob2, mob3)
     fleet = Fleet(mobs, 3)
     flock = Flock(yachts, 2)
-            
+    medic = Healer(250, -100, medic_img)
+
+    with open ("highscore.txt") as high_score_file:
+        high_score = (high_score_file.read())
+        
+        
     #Make sprite groups
     player = pygame.sprite.GroupSingle()
     player.add(ship)
@@ -427,6 +519,7 @@ def setup():
     lasers = pygame.sprite.Group()
     bombs = pygame.sprite.Group()
     cannons = pygame.sprite.Group()
+    firstaids = pygame.sprite.Group()
 
     # set level
     player.level = 1
@@ -435,7 +528,7 @@ def setup():
     stage = START
 
 def level_change():
-    global ship, mobs, stage, player, bombs, lasers, fleet, flock, yachts, cannons
+    global ship, mobs, stage, player, bombs, lasers, fleet, flock, yachts, cannons, medic, firstaids
     stage = PLAYING
     if player.level == 2:
         mob1 = Mob(228, 64, mob_img1)
@@ -503,7 +596,7 @@ while not done:
             
                     
             elif stage == END:
-                if event.key == pygame.K_SPACE:
+                if event.key == pygame.K_r:
                     setup()
                     
     if stage == PLAYING:
@@ -529,6 +622,8 @@ while not done:
         cannons.update()
         fleet.update()
         flock.update()
+        medic.update()
+        firstaids.update()
 
         if len(player) == 0:
             stage = END
@@ -549,12 +644,16 @@ while not done:
     cannons.draw(screen)
     mobs.draw(screen)
     yachts.draw(screen)
+    firstaids.draw(screen)
     show_stats(player)
 
     if stage == START:
         show_title_screen()
     if stage == END:
         show_death_screen()
+        if player.score > int(high_score):
+            writehighscore = open("highscore.txt", "w")
+            writehighscore.write(str(player.score))
 
 
     
