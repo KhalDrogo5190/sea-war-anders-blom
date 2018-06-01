@@ -25,6 +25,10 @@ These guys are captained by veterans, they've taken down some good pirates and o
 
 An old pirate comrade has come to help, although he cant do much in the way of firepower. He can shoot over supplies to heal your ship
 
+Be sure to pick up these as they float by
+
+![all-text](https://raw.github.com/KhalDrogo5190/sea-war-anders-blom/master/Assets/Images/Effects/bandaid.png "Healy Boi")
+
 ## Controls 
 
 Use A to move left, D to move right, SPACE to fire a cannon
