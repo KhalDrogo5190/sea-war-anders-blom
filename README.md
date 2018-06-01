@@ -1,4 +1,5 @@
 # Battle For Tortuga
+[Download an exe file](https://github.com/KhalDrogo5190/sea-war-anders-blom/releases/tag/1.0.0)
 
 ## Object of the game
 
