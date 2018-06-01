@@ -16,7 +16,7 @@ These ships are captained by rookies, being shot by these guys is no big deal on
 
 ![all-text](https://raw.github.com/KhalDrogo5190/sea-war-anders-blom/master/Assets/Images/Ships/ship5.png "This Guy is Like The Bubonic Plaque of Ships")
 
-These guys are captained by veterans, they've taken down some good pirates and they're shots are accurate, they can take you down in one shot no matter what your shield is
+These guys are captained by veterans, they've taken down some good pirates and one of them has the peg leg of your dead best pirate friend, they're shots are accurate, they can take you down in one shot no matter what your shield is, these guys will earn you more pirate respect for taking them down
 
 ## Controls 
 
