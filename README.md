@@ -42,7 +42,7 @@ Saling the High Seas may seem daunting to a rookie but it is much easier than it
 ![all-text](https://raw.github.com/KhalDrogo5190/sea-war-anders-blom/master/Assets/Images/Effects/pirateboat.png "Start Screen")
 
 
-![all-text](https://raw.github.com/KhalDrogo5190/sea-war-anders-blom/master/Assets/Images/Screenshots/playing1.png "Live footage of the infamous battle")
+![all-text](https://raw.github.com/KhalDrogo5190/sea-war-anders-blom/master/Assets/Images/Screenshots/playing1.PNG "Live footage of the infamous battle")
 
 
 ![all-text](https://raw.github.com/KhalDrogo5190/sea-war-anders-blom/master/Assets/Images/Effects/crossbones.png "Death Screen")
