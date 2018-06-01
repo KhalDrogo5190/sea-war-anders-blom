@@ -1,4 +1,4 @@
-# BANANANANANANAniANANANANANANANANANANANANANAN
+# Battle For Tortuga
 
 ## Object of the game
 
