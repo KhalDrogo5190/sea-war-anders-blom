@@ -31,4 +31,4 @@ Be sure to pick up these as they float by
 
 ## Controls 
 
-Use A to move left, D to move right, SPACE to fire a cannon
+Saling the High Seas may seem daunting to a rookie but it is much easier than it looks, steering the mighty vessel can be done using A + D or for rookies the left and right arrow keys can be used as well.
