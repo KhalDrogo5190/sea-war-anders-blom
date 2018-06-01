@@ -31,4 +31,6 @@ Be sure to pick up these as they float by
 
 ## Controls 
 
-Saling the High Seas may seem daunting to a rookie but it is much easier than it looks, steering the mighty vessel can be done using A + D or for rookies the left and right arrow keys can be used as well.
+Saling the High Seas may seem daunting to a rookie but it is much easier than it looks, steering the mighty vessel can be done using A + D or for rookies the left and right arrow keys can be used as well. to fire a cannon just use the space bar
+
+![all-text](https://raw.github.com/KhalDrogo5190/sea-war-anders-blom/master/Assets/Images/Screenshots/Capture3.PNG "Just in case you dont know where the keys are")
