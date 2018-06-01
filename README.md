@@ -45,6 +45,7 @@ Elon Musk*: "Reminds me of my childhood. 6 stars out of 7"
 ![all-text](https://raw.github.com/KhalDrogo5190/sea-war-anders-blom/master/Assets/Images/Screenshots/elon-musk.png "Mmmm")
 
 Chuk Mayfield*: "Cant stop playing OMG!!"
+
 ![all-text](https://raw.github.com/KhalDrogo5190/sea-war-anders-blom/master/Assets/Images/Screenshots/chuck.png "Please Conduct an ID Check")
 
 Mila Kunis*: "Whoever made this game is so smart this game is great!"
