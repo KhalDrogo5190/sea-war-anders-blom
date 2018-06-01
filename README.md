@@ -42,6 +42,7 @@ Saling the High Seas may seem daunting to a rookie but it is much easier than it
 ## User Reviews
 
 Elon Musk*: "Reminds me of my childhood. 6 stars out of 7"
+
 ![all-text](https://raw.github.com/KhalDrogo5190/sea-war-anders-blom/master/Assets/Images/Screenshots/elon-musk1.png "Mmmm")
 
 Chuk Mayfield*: "Cant stop playing OMG!!"
@@ -49,3 +50,8 @@ Chuk Mayfield*: "Cant stop playing OMG!!"
 ![all-text](https://raw.github.com/KhalDrogo5190/sea-war-anders-blom/master/Assets/Images/Screenshots/chuck1.png "Please Conduct an ID Check")
 
 Mila Kunis*: "Whoever made this game is so smart this game is great!"
+
+![all-text](https://raw.github.com/KhalDrogo5190/sea-war-anders-blom/master/Assets/Images/Screenshots/mila1.png "AYEO")
+
+
+*To my knoweldge none of these people have played or reviewed my game
