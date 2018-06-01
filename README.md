@@ -10,13 +10,13 @@ You are a pirate sailing back from plundering some islands, you have the booty, 
 
 ### The Enemies:
 
-![all-text](https://raw.github.com/KhalDrogo5190/sea-war-anders-blom/master/Assets/Images/Ships/ship1.png "Sick Gnarly Am I Right ;)")
+![all-text](https://raw.github.com/KhalDrogo5190/sea-war-anders-blom/master/Assets/Images/Ships/ship4.png "Lightweight")
 
-this dude is the a light weight
+These ships are captained by rookies, being shot by these guys is no big deal only dealing 1 damage to your mighty vessel
 
-![all-text](https://raw.github.com/KhalDrogo5190/sea-war-anders-blom/master/Assets/Images/Ships/ship1.png "Sick Gnarly Am I Right ;)")
+![all-text](https://raw.github.com/KhalDrogo5190/sea-war-anders-blom/master/Assets/Images/Ships/ship5.png "This Guy is Like The Bubonic Plaque of Ships")
 
-this dude will frek you up girllllll
+These guys are captained by veterans, they've taken down some good pirates and they're shots are accurate, they can take you down in one shot no matter what your shield is
 
 ## Controls 
 
