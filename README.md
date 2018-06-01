@@ -36,7 +36,7 @@ Saling the High Seas may seem daunting to a rookie but it is much easier than it
 
 ![all-text](https://raw.github.com/KhalDrogo5190/sea-war-anders-blom/master/Assets/Images/Screenshots/Capture3.PNG "Just in case you dont know where the keys are")
 
-The game starts wants you press space on the start screen and will restart back to the start screen when 'r' is pressed on the death screen
+The game starts once you press space on the start screen and will restart back to the start screen when 'r' is pressed on the death screen
 
 ## Images from the Game
 
