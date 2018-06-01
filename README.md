@@ -10,6 +10,14 @@ You are a pirate sailing back from plundering some islands, you have the booty, 
 
 ### The Enemies:
 
+![all-text](https://raw.github.com/KhalDrogo5190/sea-war-anders-blom/master/Assets/Images/Ships/ship1.png "Sick Gnarly Am I Right ;)")
+
+this dude is the a light weight
+
+![all-text](https://raw.github.com/KhalDrogo5190/sea-war-anders-blom/master/Assets/Images/Ships/ship1.png "Sick Gnarly Am I Right ;)")
+
+this dude will frek you up girllllll
+
 ## Controls 
 
 Use A to move left, D to move right, SPACE to fire a cannon
