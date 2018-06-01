@@ -42,7 +42,7 @@ Saling the High Seas may seem daunting to a rookie but it is much easier than it
 ## User Reviews
 
 Elon Musk*: "Reminds me of my childhood. 6 stars out of 7"
-![all-text](https://raw.github.com/KhalDrogo5190/sea-war-anders-blom/master/Assets/Images/Screenshots/elon-musk.png "Mmmm")
+![all-text](https://raw.github.com/KhalDrogo5190/sea-war-anders-blom/master/Assets/Images/Screenshots/elon-musk1.png "Mmmm")
 
 Chuk Mayfield*: "Cant stop playing OMG!!"
 
